@@ -101,18 +101,21 @@ public class Index extends javax.swing.JFrame {
         // TODO add your handling code here:
         Obat ob = new Obat();
         ob.setVisible(true);
+        setVisible(false);
     }//GEN-LAST:event_btObatActionPerformed
 
     private void btKaryawanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btKaryawanActionPerformed
         // TODO add your handling code here:
         Karyawan kar = new Karyawan();
         kar.setVisible(true);
+        setVisible(false);
     }//GEN-LAST:event_btKaryawanActionPerformed
 
     private void btOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btOutActionPerformed
         // TODO add your handling code here:
         Login log = new Login();
         log.setVisible(true);
+        setVisible(false);
     }//GEN-LAST:event_btOutActionPerformed
 
     /**

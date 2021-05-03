@@ -75,6 +75,7 @@ public class Login extends javax.swing.JFrame {
         if(txtUser.getText().equals("admin")&&txtPass.getText().equals(("admin"))){
             Index ind = new Index();
             ind.setVisible(true);
+            setVisible(false);
         }
         else{
             JOptionPane.showMessageDialog(null,"Username atau password salah!");

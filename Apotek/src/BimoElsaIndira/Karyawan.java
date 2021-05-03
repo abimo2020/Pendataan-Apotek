@@ -111,6 +111,7 @@ public class Karyawan extends javax.swing.JFrame {
         tbDelete = new javax.swing.JButton();
         txtAlamat = new javax.swing.JTextField();
         txtUmur = new javax.swing.JTextField();
+        btOut = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -186,6 +187,14 @@ public class Karyawan extends javax.swing.JFrame {
         getContentPane().add(txtAlamat, new org.netbeans.lib.awtextra.AbsoluteConstraints(184, 270, 283, 82));
         getContentPane().add(txtUmur, new org.netbeans.lib.awtextra.AbsoluteConstraints(182, 179, 41, -1));
 
+        btOut.setText("Logout");
+        btOut.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btOutActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btOut, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 10, -1, -1));
+
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
@@ -216,6 +225,13 @@ public class Karyawan extends javax.swing.JFrame {
         reset();
 
     }//GEN-LAST:event_tbEditActionPerformed
+
+    private void btOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btOutActionPerformed
+        // TODO add your handling code here:
+        Login log = new Login();
+        log.setVisible(true);
+        setVisible(false);
+    }//GEN-LAST:event_btOutActionPerformed
 
     /**
      * @param args the command line arguments
@@ -253,6 +269,7 @@ public class Karyawan extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btOut;
     private javax.swing.JButton btTambah;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

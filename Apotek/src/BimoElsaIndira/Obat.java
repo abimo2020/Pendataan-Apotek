@@ -129,6 +129,7 @@ public class Obat extends javax.swing.JFrame {
         btHapus = new javax.swing.JButton();
         jScrollPane3 = new javax.swing.JScrollPane();
         tabelObat = new javax.swing.JTable();
+        btOut = new javax.swing.JButton();
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -263,6 +264,14 @@ public class Obat extends javax.swing.JFrame {
 
         getContentPane().add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 360, 610, 140));
 
+        btOut.setText("Logout");
+        btOut.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btOutActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btOut, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 10, -1, -1));
+
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
@@ -315,6 +324,13 @@ public class Obat extends javax.swing.JFrame {
         reset();
     }//GEN-LAST:event_btResetActionPerformed
 
+    private void btOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btOutActionPerformed
+        // TODO add your handling code here:
+        Login log = new Login();
+        log.setVisible(true);
+        setVisible(false);
+    }//GEN-LAST:event_btOutActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -353,6 +369,7 @@ public class Obat extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btEdit;
     private javax.swing.JButton btHapus;
+    private javax.swing.JButton btOut;
     private javax.swing.JButton btReset;
     private javax.swing.JButton btTambah;
     private javax.swing.JComboBox<String> cbJenis;
