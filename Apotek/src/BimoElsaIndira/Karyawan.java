@@ -10,13 +10,14 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author LENOVO LEGION Y540
  */
-public class Karyawan extends javax.swing.JFrame {
+public class Karyawan extends javax.swing.JFrame implements FungsiData{
 
     
     public Karyawan() {
         initComponents();
     }
-     private void reset(){
+    @Override
+     public void reset(){
         txtID.setEditable(true);
         txtID.setText(null);
         txtNama.setText(null);
@@ -24,7 +25,8 @@ public class Karyawan extends javax.swing.JFrame {
         txtNo.setText(null);
         txtAlamat.setText(null);
     }
-    private void tampil(){
+    @Override
+    public void tampil(){
         DefaultTableModel kolom = new DefaultTableModel();
         kolom.addColumn("No");
         kolom.addColumn("ID");
@@ -48,7 +50,8 @@ public class Karyawan extends javax.swing.JFrame {
             System.out.println("System anda error karena "+e.getMessage());
         }
     }
-    private void tambah(){
+    @Override
+    public void tambah(){
         try{
             String query = "INSERT INTO karyawan VALUES('"+txtID.getText()+"','"+txtNama.getText()+"','"+txtUmur.getText()+"','"+txtNo.getText()+"','"+txtAlamat.getText()+"')";
             java.sql.Connection conn = (Connection)KoneksiDB.connDB();
@@ -60,7 +63,8 @@ public class Karyawan extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, e.getMessage());
         }
     }
-    private void edit(){
+    @Override
+    public void edit(){
         try{
             String query = "UPDATE karyawan SET id = '"+txtID.getText()+"', nama = '"+txtNama.getText()+"', umur = '"+txtUmur.getText()+"', no_telepon = '"+txtNo.getText()+"', alamat = '"+txtAlamat.getText()+"' WHERE id = '"+txtID.getText()+"'";
             java.sql.Connection conn = (Connection)KoneksiDB.connDB();
@@ -72,7 +76,8 @@ public class Karyawan extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, e.getMessage());
         }
     }
-    private void delete(){
+    @Override
+    public void delete(){
         try{
             String query = "DELETE FROM karyawan WHERE id = '"+txtID.getText()+"'";
             java.sql.Connection conn = (Connection)KoneksiDB.connDB();
@@ -112,6 +117,7 @@ public class Karyawan extends javax.swing.JFrame {
         txtAlamat = new javax.swing.JTextField();
         txtUmur = new javax.swing.JTextField();
         btOut = new javax.swing.JButton();
+        btBack = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -193,7 +199,15 @@ public class Karyawan extends javax.swing.JFrame {
                 btOutActionPerformed(evt);
             }
         });
-        getContentPane().add(btOut, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 10, -1, -1));
+        getContentPane().add(btOut, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 10, 80, -1));
+
+        btBack.setText("Kembali");
+        btBack.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btBackActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 40, 80, -1));
 
         pack();
         setLocationRelativeTo(null);
@@ -233,6 +247,14 @@ public class Karyawan extends javax.swing.JFrame {
         setVisible(false);
     }//GEN-LAST:event_btOutActionPerformed
 
+    private void btBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btBackActionPerformed
+        // TODO add your handling code here:
+        Index in = new Index();
+        in.setVisible(true);
+        setVisible(false);
+              
+    }//GEN-LAST:event_btBackActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -269,6 +291,7 @@ public class Karyawan extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btBack;
     private javax.swing.JButton btOut;
     private javax.swing.JButton btTambah;
     private javax.swing.JLabel jLabel1;

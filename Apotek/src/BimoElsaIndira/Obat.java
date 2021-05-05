@@ -15,12 +15,13 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author LENOVO LEGION Y540
  */
-public class Obat extends javax.swing.JFrame {
+public class Obat extends javax.swing.JFrame implements FungsiData{
 
     /**
      * Creates new form Obat
      */
-    private void reset(){
+    @Override
+    public void reset(){
         txtKode.setEditable(true);
         txtKode.setText(null);
         txtNama.setText(null);
@@ -29,7 +30,8 @@ public class Obat extends javax.swing.JFrame {
         cbJenis.setSelectedItem(this);
         cbKategori.setSelectedItem(this);
     }
-    private void tampil(){
+    @Override
+    public void tampil(){
         DefaultTableModel kolom = new DefaultTableModel();
         kolom.addColumn("No");
         kolom.addColumn("Kode");
@@ -54,7 +56,8 @@ public class Obat extends javax.swing.JFrame {
             System.out.println("System anda error karena "+e.getMessage());
         }
     }
-    private void tambah(){
+    @Override
+    public void tambah(){
         try{
             String query = "INSERT INTO obat VALUES('"+txtKode.getText()+"','"+txtNama.getText()+"','"+cbJenis.getSelectedItem()+"','"+txtStok.getText()+"','"+cbKategori.getSelectedItem()+"','"+txtHarga.getText()+"')";
             java.sql.Connection conn = (Connection)KoneksiDB.connDB();
@@ -66,7 +69,8 @@ public class Obat extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, e.getMessage());
         }
     }
-    private void edit(){
+    @Override
+    public void edit(){
         try{
             String query = "UPDATE obat SET kode = '"+txtKode.getText()+"', nama = '"+txtNama.getText()+"', jenis = '"+cbJenis.getSelectedItem()+"', stok = '"+txtStok.getText()+"', kategori = '"+cbKategori.getSelectedItem()+"', harga = '"+txtHarga.getText()+"' WHERE kode = '"+txtKode.getText()+"'";
             java.sql.Connection conn = (Connection)KoneksiDB.connDB();
@@ -78,7 +82,8 @@ public class Obat extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, e.getMessage());
         }
     }
-    private void delete(){
+    @Override
+    public void delete(){
         try{
             String query = "DELETE FROM obat WHERE kode = '"+txtKode.getText()+"'";
             java.sql.Connection conn = (Connection)KoneksiDB.connDB();
@@ -130,6 +135,7 @@ public class Obat extends javax.swing.JFrame {
         jScrollPane3 = new javax.swing.JScrollPane();
         tabelObat = new javax.swing.JTable();
         btOut = new javax.swing.JButton();
+        btBack = new javax.swing.JButton();
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -270,7 +276,15 @@ public class Obat extends javax.swing.JFrame {
                 btOutActionPerformed(evt);
             }
         });
-        getContentPane().add(btOut, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 10, -1, -1));
+        getContentPane().add(btOut, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 10, 80, -1));
+
+        btBack.setText("Kembali");
+        btBack.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btBackActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 40, 80, -1));
 
         pack();
         setLocationRelativeTo(null);
@@ -331,6 +345,13 @@ public class Obat extends javax.swing.JFrame {
         setVisible(false);
     }//GEN-LAST:event_btOutActionPerformed
 
+    private void btBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btBackActionPerformed
+        // TODO add your handling code here:
+        Index in = new Index();
+        in.setVisible(true);
+        setVisible(false);
+    }//GEN-LAST:event_btBackActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -367,6 +388,7 @@ public class Obat extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btBack;
     private javax.swing.JButton btEdit;
     private javax.swing.JButton btHapus;
     private javax.swing.JButton btOut;
