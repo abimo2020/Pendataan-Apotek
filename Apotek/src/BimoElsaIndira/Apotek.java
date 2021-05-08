@@ -5,6 +5,7 @@
  */
 package BimoElsaIndira;
 
+import javax.swing.JOptionPane;
 /**
  *
  * @author LENOVO LEGION Y540
@@ -13,7 +14,5 @@ public class Apotek {
     public static void main (String[] args){
         Login log = new Login();
         log.setVisible(true);
-        log.setLocationRelativeTo(null);
-        log.setDefaultCloseOperation(Login.EXIT_ON_CLOSE);
     }
 }
