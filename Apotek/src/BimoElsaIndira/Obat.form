@@ -68,7 +68,7 @@
     <Property name="defaultCloseOperation" type="int" value="3"/>
     <Property name="title" type="java.lang.String" value="Aplikasi Data Karyawan"/>
     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-      <Color blue="66" green="66" red="ff" type="rgb"/>
+      <Color blue="fa" green="cf" red="f9" type="rgb"/>
     </Property>
   </Properties>
   <SyntheticProperties>
@@ -107,6 +107,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="btTambah">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="92" green="c2" red="8f" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Tambah"/>
       </Properties>
       <Events>
@@ -120,6 +123,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="btEdit">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="c2" green="a1" red="8f" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Edit"/>
       </Properties>
       <Events>
@@ -262,6 +268,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="btReset">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="77" green="f6" red="fc" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Reset"/>
       </Properties>
       <Events>
@@ -275,6 +284,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="btHapus">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="53" green="53" red="ed" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Delete"/>
       </Properties>
       <Events>

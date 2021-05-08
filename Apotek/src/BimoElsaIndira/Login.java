@@ -37,6 +37,7 @@ public class Login extends javax.swing.JFrame {
         txtPass = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(237, 215, 192));
         setMinimumSize(new java.awt.Dimension(400, 360));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -50,6 +51,8 @@ public class Login extends javax.swing.JFrame {
         jLabel3.setText("Password");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 129, -1, -1));
 
+        btLogin.setBackground(new java.awt.Color(46, 104, 143));
+        btLogin.setForeground(new java.awt.Color(255, 255, 255));
         btLogin.setText("LOGIN");
         btLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

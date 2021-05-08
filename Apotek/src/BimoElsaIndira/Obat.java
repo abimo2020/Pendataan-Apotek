@@ -178,13 +178,14 @@ public class Obat extends javax.swing.JFrame implements FungsiData{
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Aplikasi Data Karyawan");
-        setBackground(new java.awt.Color(255, 102, 102));
+        setBackground(new java.awt.Color(249, 207, 250));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setText("DATA OBAT");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 30, 110, 20));
 
+        btTambah.setBackground(new java.awt.Color(143, 194, 146));
         btTambah.setText("Tambah");
         btTambah.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -193,6 +194,7 @@ public class Obat extends javax.swing.JFrame implements FungsiData{
         });
         getContentPane().add(btTambah, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 330, -1, -1));
 
+        btEdit.setBackground(new java.awt.Color(143, 161, 194));
         btEdit.setText("Edit");
         btEdit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -234,6 +236,7 @@ public class Obat extends javax.swing.JFrame implements FungsiData{
         cbKategori.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Anak-Anak", "Dewasa", "Semua Usia" }));
         getContentPane().add(cbKategori, new org.netbeans.lib.awtextra.AbsoluteConstraints(209, 232, 149, -1));
 
+        btReset.setBackground(new java.awt.Color(252, 246, 119));
         btReset.setText("Reset");
         btReset.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -242,6 +245,7 @@ public class Obat extends javax.swing.JFrame implements FungsiData{
         });
         getContentPane().add(btReset, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 330, -1, -1));
 
+        btHapus.setBackground(new java.awt.Color(237, 83, 83));
         btHapus.setText("Delete");
         btHapus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

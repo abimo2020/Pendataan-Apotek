@@ -120,6 +120,7 @@ public class Karyawan extends javax.swing.JFrame implements FungsiData{
         btBack = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(249, 207, 250));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
@@ -159,6 +160,7 @@ public class Karyawan extends javax.swing.JFrame implements FungsiData{
 
         getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 444, 557, 110));
 
+        btTambah.setBackground(new java.awt.Color(143, 194, 146));
         btTambah.setText("Tambah");
         btTambah.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -167,6 +169,7 @@ public class Karyawan extends javax.swing.JFrame implements FungsiData{
         });
         getContentPane().add(btTambah, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 406, -1, -1));
 
+        tbEdit.setBackground(new java.awt.Color(143, 161, 194));
         tbEdit.setText("Edit");
         tbEdit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -175,6 +178,7 @@ public class Karyawan extends javax.swing.JFrame implements FungsiData{
         });
         getContentPane().add(tbEdit, new org.netbeans.lib.awtextra.AbsoluteConstraints(109, 406, -1, -1));
 
+        tbReset.setBackground(new java.awt.Color(252, 246, 119));
         tbReset.setText("Reset");
         tbReset.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -183,6 +187,7 @@ public class Karyawan extends javax.swing.JFrame implements FungsiData{
         });
         getContentPane().add(tbReset, new org.netbeans.lib.awtextra.AbsoluteConstraints(515, 406, -1, -1));
 
+        tbDelete.setBackground(new java.awt.Color(237, 83, 83));
         tbDelete.setText("Delete");
         tbDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
