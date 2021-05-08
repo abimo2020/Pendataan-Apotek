@@ -19,6 +19,12 @@ public class Login extends javax.swing.JFrame {
     public Login() {
         initComponents();
     }
+    private void alert(){
+        JOptionPane.showMessageDialog(null, "Username atau password salah!");
+    }
+    private void alert(String nama){
+        JOptionPane.showMessageDialog(null, "Selamat datang "+nama+"...");
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -76,9 +82,11 @@ public class Login extends javax.swing.JFrame {
             Index ind = new Index();
             ind.setVisible(true);
             setVisible(false);
+            this.alert(txtUser.getText());
+            
         }
         else{
-            JOptionPane.showMessageDialog(null,"Username atau password salah!");
+            this.alert();
         }
     }//GEN-LAST:event_btLoginActionPerformed
 
