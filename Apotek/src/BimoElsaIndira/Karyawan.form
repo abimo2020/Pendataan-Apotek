@@ -218,6 +218,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="btOut">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="53" green="53" red="ed" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Logout"/>
       </Properties>
       <Events>
@@ -231,6 +234,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="btBack">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="c2" green="a1" red="8f" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Kembali"/>
       </Properties>
       <Events>
