@@ -9,7 +9,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author LENOVO LEGION Y540
+ * @author BimoElsaIndira
  */
 public class Login extends javax.swing.JFrame {
 

@@ -13,7 +13,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author LENOVO LEGION Y540
+ * @author BimoElsaIndira
  */
 public class Obat extends javax.swing.JFrame implements FungsiData{
 
