@@ -118,6 +118,7 @@ public class Karyawan extends javax.swing.JFrame implements FungsiData{
         txtUmur = new javax.swing.JTextField();
         btOut = new javax.swing.JButton();
         btBack = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(249, 207, 250));
@@ -216,6 +217,9 @@ public class Karyawan extends javax.swing.JFrame implements FungsiData{
         });
         getContentPane().add(btBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 40, 80, -1));
 
+        jPanel1.setBackground(new java.awt.Color(244, 225, 245));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -10, 620, 590));
+
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
@@ -307,6 +311,7 @@ public class Karyawan extends javax.swing.JFrame implements FungsiData{
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable tabelKaryawan;
     private javax.swing.JButton tbDelete;
