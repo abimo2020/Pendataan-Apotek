@@ -198,6 +198,7 @@ public class Karyawan extends javax.swing.JFrame implements FungsiData{
         getContentPane().add(txtAlamat, new org.netbeans.lib.awtextra.AbsoluteConstraints(184, 270, 283, 82));
         getContentPane().add(txtUmur, new org.netbeans.lib.awtextra.AbsoluteConstraints(182, 179, 41, -1));
 
+        btOut.setBackground(new java.awt.Color(237, 83, 83));
         btOut.setText("Logout");
         btOut.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -206,6 +207,7 @@ public class Karyawan extends javax.swing.JFrame implements FungsiData{
         });
         getContentPane().add(btOut, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 10, 80, -1));
 
+        btBack.setBackground(new java.awt.Color(143, 161, 194));
         btBack.setText("Kembali");
         btBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

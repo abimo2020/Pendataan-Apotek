@@ -136,6 +136,7 @@ public class Obat extends javax.swing.JFrame implements FungsiData{
         tabelObat = new javax.swing.JTable();
         btOut = new javax.swing.JButton();
         btBack = new javax.swing.JButton();
+        jLabel10 = new javax.swing.JLabel();
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -274,6 +275,7 @@ public class Obat extends javax.swing.JFrame implements FungsiData{
 
         getContentPane().add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 360, 610, 140));
 
+        btOut.setBackground(new java.awt.Color(237, 83, 83));
         btOut.setText("Logout");
         btOut.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -282,6 +284,7 @@ public class Obat extends javax.swing.JFrame implements FungsiData{
         });
         getContentPane().add(btOut, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 10, 80, -1));
 
+        btBack.setBackground(new java.awt.Color(143, 161, 194));
         btBack.setText("Kembali");
         btBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -289,6 +292,7 @@ public class Obat extends javax.swing.JFrame implements FungsiData{
             }
         });
         getContentPane().add(btBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 40, 80, -1));
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 80, 40));
 
         pack();
         setLocationRelativeTo(null);
@@ -401,6 +405,7 @@ public class Obat extends javax.swing.JFrame implements FungsiData{
     private javax.swing.JComboBox<String> cbJenis;
     private javax.swing.JComboBox<String> cbKategori;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
