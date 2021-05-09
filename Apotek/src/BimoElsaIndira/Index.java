@@ -7,7 +7,7 @@ package BimoElsaIndira;
 
 /**
  *
- * @author LENOVO LEGION Y540
+ * @author BimoElsaIndira
  */
 public class Index extends javax.swing.JFrame {
 
@@ -33,11 +33,13 @@ public class Index extends javax.swing.JFrame {
         btOut = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(171, 224, 224));
         setPreferredSize(new java.awt.Dimension(400, 360));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel1.setText("PILIH MENU");
 
+        btObat.setBackground(new java.awt.Color(249, 207, 250));
         btObat.setText("Data Obat");
         btObat.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -45,6 +47,7 @@ public class Index extends javax.swing.JFrame {
             }
         });
 
+        btKaryawan.setBackground(new java.awt.Color(237, 215, 192));
         btKaryawan.setText("Data Karyawan");
         btKaryawan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -52,6 +55,7 @@ public class Index extends javax.swing.JFrame {
             }
         });
 
+        btOut.setBackground(new java.awt.Color(237, 83, 83));
         btOut.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         btOut.setText("Logout");
         btOut.addActionListener(new java.awt.event.ActionListener() {
@@ -72,11 +76,11 @@ public class Index extends javax.swing.JFrame {
                             .addComponent(btObat, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btKaryawan)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(151, 151, 151)
-                        .addComponent(jLabel1))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(162, 162, 162)
-                        .addComponent(btOut)))
+                        .addComponent(btOut))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(149, 149, 149)
+                        .addComponent(jLabel1)))
                 .addContainerGap(145, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(

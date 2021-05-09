@@ -9,7 +9,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 /**
  *
- * @author LENOVO LEGION Y540
+ * @author BimoElsaIndira
  */
 public class KoneksiDB {
     private static Connection SQLconn;

@@ -8,7 +8,7 @@ package BimoElsaIndira;
 import javax.swing.JOptionPane;
 /**
  *
- * @author LENOVO LEGION Y540
+ * @author BimoElsaIndira
  */
 public class Apotek {
     public static void main (String[] args){
