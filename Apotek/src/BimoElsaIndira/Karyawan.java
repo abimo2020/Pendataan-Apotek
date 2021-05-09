@@ -8,7 +8,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author BimoElsaIndira
+ * @author BimoElsaIndiraay
  */
 public class Karyawan extends javax.swing.JFrame implements FungsiData{
 
