@@ -15,6 +15,13 @@ public class Karyawan extends javax.swing.JFrame implements FungsiData{
     
     public Karyawan() {
         initComponents();
+        tampil();
+    }
+    private void javaDB(String query, String pesan) throws SQLException{
+            java.sql.Connection conn = (Connection)KoneksiDB.connDB();
+            java.sql.PreparedStatement pstm = conn.prepareStatement(query);
+            pstm.execute();
+            JOptionPane.showMessageDialog(null,pesan);
     }
     @Override
      public void reset(){
@@ -54,10 +61,7 @@ public class Karyawan extends javax.swing.JFrame implements FungsiData{
     public void tambah(){
         try{
             String query = "INSERT INTO karyawan VALUES('"+txtID.getText()+"','"+txtNama.getText()+"','"+txtUmur.getText()+"','"+txtNo.getText()+"','"+txtAlamat.getText()+"')";
-            java.sql.Connection conn = (Connection)KoneksiDB.connDB();
-            java.sql.PreparedStatement pstm = conn.prepareStatement(query);
-            pstm.execute();
-            JOptionPane.showMessageDialog(null,"Data berhasil ditambahkan!");
+            this.javaDB(query,"Data berhasil ditambahkan...");
         }
         catch(HeadlessException | SQLException e){
             JOptionPane.showMessageDialog(this, e.getMessage());
@@ -67,10 +71,7 @@ public class Karyawan extends javax.swing.JFrame implements FungsiData{
     public void edit(){
         try{
             String query = "UPDATE karyawan SET id = '"+txtID.getText()+"', nama = '"+txtNama.getText()+"', umur = '"+txtUmur.getText()+"', no_telepon = '"+txtNo.getText()+"', alamat = '"+txtAlamat.getText()+"' WHERE id = '"+txtID.getText()+"'";
-            java.sql.Connection conn = (Connection)KoneksiDB.connDB();
-            java.sql.PreparedStatement pstm = conn.prepareStatement(query);
-            pstm.execute();
-            JOptionPane.showMessageDialog(null,"Data berhasil diedit!");
+            this.javaDB(query,"Data berhasil diedit...");
         }
         catch(HeadlessException | SQLException e){
             JOptionPane.showMessageDialog(this, e.getMessage());
@@ -80,10 +81,7 @@ public class Karyawan extends javax.swing.JFrame implements FungsiData{
     public void delete(){
         try{
             String query = "DELETE FROM karyawan WHERE id = '"+txtID.getText()+"'";
-            java.sql.Connection conn = (Connection)KoneksiDB.connDB();
-            java.sql.PreparedStatement pstm = conn.prepareStatement(query);
-            pstm.execute();
-            JOptionPane.showMessageDialog(null,"Data berhasil dihapus!");
+            this.javaDB(query,"Data berhasil delete");
         }
         catch(HeadlessException | SQLException e){
             JOptionPane.showMessageDialog(this, e.getMessage());
@@ -157,6 +155,11 @@ public class Karyawan extends javax.swing.JFrame implements FungsiData{
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        tabelKaryawan.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tabelKaryawanMouseClicked(evt);
+            }
+        });
         jScrollPane2.setViewportView(tabelKaryawan);
 
         getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 444, 557, 110));
@@ -265,6 +268,21 @@ public class Karyawan extends javax.swing.JFrame implements FungsiData{
         setVisible(false);
               
     }//GEN-LAST:event_btBackActionPerformed
+
+    private void tabelKaryawanMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tabelKaryawanMouseClicked
+        // TODO add your handling code here:
+        int rows = tabelKaryawan.rowAtPoint(evt.getPoint());
+        String id = tabelKaryawan.getValueAt(rows,1).toString();
+        txtID.setText(id);
+        String nama = tabelKaryawan.getValueAt(rows,2).toString();
+        txtNama.setText(nama);
+        String umur = tabelKaryawan.getValueAt(rows,3).toString();
+        txtUmur.setText(umur);
+        String no = tabelKaryawan.getValueAt(rows,4).toString();
+        txtNo.setText(no);
+        String alamat = tabelKaryawan.getValueAt(rows,5).toString();
+        txtAlamat.setText(alamat);
+    }//GEN-LAST:event_tabelKaryawanMouseClicked
 
     /**
      * @param args the command line arguments

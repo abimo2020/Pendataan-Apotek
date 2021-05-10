@@ -20,6 +20,12 @@ public class Obat extends javax.swing.JFrame implements FungsiData{
     /**
      * Creates new form Obat
      */
+    private void javaDB(String query, String pesan) throws SQLException{
+            java.sql.Connection conn = (Connection)KoneksiDB.connDB();
+            java.sql.PreparedStatement pstm = conn.prepareStatement(query);
+            pstm.execute();
+            JOptionPane.showMessageDialog(null,pesan);
+    }
     @Override
     public void reset(){
         txtKode.setEditable(true);
@@ -60,10 +66,7 @@ public class Obat extends javax.swing.JFrame implements FungsiData{
     public void tambah(){
         try{
             String query = "INSERT INTO obat VALUES('"+txtKode.getText()+"','"+txtNama.getText()+"','"+cbJenis.getSelectedItem()+"','"+txtStok.getText()+"','"+cbKategori.getSelectedItem()+"','"+txtHarga.getText()+"')";
-            java.sql.Connection conn = (Connection)KoneksiDB.connDB();
-            java.sql.PreparedStatement pstm = conn.prepareStatement(query);
-            pstm.execute();
-            JOptionPane.showMessageDialog(null,"Data berhasil ditambahkan!");
+            this.javaDB(query,"Data berhasil ditambahkan...");
         }
         catch(HeadlessException | SQLException e){
             JOptionPane.showMessageDialog(this, e.getMessage());
@@ -73,10 +76,7 @@ public class Obat extends javax.swing.JFrame implements FungsiData{
     public void edit(){
         try{
             String query = "UPDATE obat SET kode = '"+txtKode.getText()+"', nama = '"+txtNama.getText()+"', jenis = '"+cbJenis.getSelectedItem()+"', stok = '"+txtStok.getText()+"', kategori = '"+cbKategori.getSelectedItem()+"', harga = '"+txtHarga.getText()+"' WHERE kode = '"+txtKode.getText()+"'";
-            java.sql.Connection conn = (Connection)KoneksiDB.connDB();
-            java.sql.PreparedStatement pstm = conn.prepareStatement(query);
-            pstm.execute();
-            JOptionPane.showMessageDialog(null,"Data berhasil diedit!");
+            this.javaDB(query,"Data berhasil diedit...");
         }
         catch(HeadlessException | SQLException e){
             JOptionPane.showMessageDialog(this, e.getMessage());
@@ -86,10 +86,7 @@ public class Obat extends javax.swing.JFrame implements FungsiData{
     public void delete(){
         try{
             String query = "DELETE FROM obat WHERE kode = '"+txtKode.getText()+"'";
-            java.sql.Connection conn = (Connection)KoneksiDB.connDB();
-            java.sql.PreparedStatement pstm = conn.prepareStatement(query);
-            pstm.execute();
-            JOptionPane.showMessageDialog(null,"Data berhasil dihapus!");
+            this.javaDB(query, "Data berhasil dihapus...");
         }
         catch(HeadlessException | SQLException e){
             JOptionPane.showMessageDialog(this, e.getMessage());
@@ -308,7 +305,7 @@ public class Obat extends javax.swing.JFrame implements FungsiData{
             .addGap(0, 720, Short.MAX_VALUE)
         );
 
-        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -30, 650, 720));
+        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -30, 650, 720));
 
         pack();
         setLocationRelativeTo(null);

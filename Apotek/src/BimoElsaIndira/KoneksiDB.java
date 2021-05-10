@@ -13,7 +13,7 @@ import java.sql.SQLException;
  */
 public class KoneksiDB {
     private static Connection SQLconn;
-    public static Connection connDB()throws SQLException{
+        public static Connection connDB()throws SQLException{
         try{
            String url = "jdbc:mysql://localhost:3306/apotek";
            String user = "root";

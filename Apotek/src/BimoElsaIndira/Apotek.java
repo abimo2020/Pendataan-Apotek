@@ -5,7 +5,6 @@
  */
 package BimoElsaIndira;
 
-import javax.swing.JOptionPane;
 /**
  *
  * @author BimoElsaIndira
